@@ -1,0 +1,28 @@
+{
+	"root": true,
+	"overrides": [
+		{
+			"files": ["**/*.tsx"],
+			"parser": "@typescript-eslint/parser",
+			"parserOptions": {
+				"project": true,
+				"tsconfigRootDir": "./tsconfig.json"
+			},
+			"plugins": ["@typescript-eslint"],
+			"rules": {
+				"@typescript-eslint/no-explicit-any": 2,
+				"@typescript-eslint/explicit-function-return-type": 2,
+				"@typescript-eslint/typedef": [
+					2,
+					{
+						"variableDeclaration": true,
+						"memberVariableDeclaration": true,
+						"parameter": true,
+						"propertyDeclaration": true,
+						"variableDeclarationIgnoreFunction": true
+					}
+				]
+			}
+		}
+	]
+}

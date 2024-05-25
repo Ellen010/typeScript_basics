@@ -1,0 +1,34 @@
+{
+	"transformIgnorePatterns": [
+		"node_modules/(?!(jest-)?@?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)",
+		"@testing-library/react-native"
+	],
+	"moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+	"projects": [
+		{
+			"displayName": {
+				"name": "intact project",
+				"color": "yellow"
+			},
+			"testMatch": ["**/App.test.js"],
+			"preset": "jest-expo"
+		},
+		{
+			"runner": "jest-runner-tsc",
+			"displayName": {
+				"name": "right types",
+				"color": "blue"
+			},
+			"moduleFileExtensions": ["js", "ts", "tsx"],
+			"testMatch": ["**/App.tsx"]
+		},
+		{
+			"runner": "jest-runner-eslint",
+			"displayName": {
+				"name": "everything typed",
+				"color": "magenta"
+			},
+			"testMatch": ["**/App.tsx"]
+		}
+	]
+}
